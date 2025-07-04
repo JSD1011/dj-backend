@@ -10,13 +10,13 @@ dotenv.config({
     path : './env'
 })
 connectDB()
-
+s
 // in db file we use async so we receive promise like this
 
 .then(()=>{
-    myPort = process.env.PORT;
-    app.listen(myPort || 8000,()=>{
-        console.log(`Server is running at port ${myPort}`);    
+    // myPort = process.env.PORT;
+    app.listen(process.env.PORT || 8000,()=>{
+        console.log(`Server is running at port ${process.env.PORT}`);    
     })
 })
 .catch((err)=>{
